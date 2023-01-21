@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <!-- meta -->
+    <meta property="og:url" content="https://day-lee.github.io/wedding-invitation/">
+    <meta property="og:title" content="Jack & Dayeon">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="img/rr-main-golden.jpg">
+    <meta property="og:description" content="Request the honor of your presence at the wedding">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" >
+
+    <title>Jack & Dayeon</title>
+    <link rel="icon" href="img/heart.png">
+
+    <!--  CSS Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="theme-mo.css">
+    <!-- <link rel="stylesheet" type="text/css" href="theme_ko.css"> -->
+    <link rel="stylesheet" type="text/css" href="./icons/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!--  Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;900&family=Ubuntu&display=swap">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&family=Source+Serif+Pro&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR&display=swap" rel="stylesheet">
+    <!--  Font Awesome -->
+    <script src="https://kit.fontawesome.com/1754e001d0.js" crossorigin="anonymous"></script>
+
+    <!-- sweetalert -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+  </head>
+
+<style>
+.btn-outline-dark.focus, .btn-outline-dark:focus {
+    box-shadow: 0 0 0 0.2rem #fff;
+}
+.btn-rsvp:focus-visible {
+  outline: 2px black;
+  border-radius: 0%;
+}
+.btn-close {
+  margin-right: 10%;
+  margin-left: 10%;
+  /* text-align: center; */
+}
+.btn.focus, .btn:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0 rgb(0 123 255 / 25%);
+}
+.btn-outline-dark-custom:not(:disabled):not(.disabled).active, .btn-outline-dark:not(:disabled):not(.disabled):active, .show>.btn-outline-dark.dropdown-toggle {
+    color: #fff;
+    background-color: #343a40;
+    border-color: #343a40;
+}
+.btn-rsvp:not(:disabled):not(.disabled).active, .btn:not(:disabled):not(.disabled):active {
+    background-image: none;
+}
+.btn-rsvp:not(:disabled):not(.disabled) {
+    cursor: pointer;
+}
+.btn-outline-dark:hover {
+    color: #fff;
+    background-color: #343a40;
+    border-color: #343a40;
+}
+.btn-rsvp:focus, .btn:hover {
+    text-decoration: none;
+}
+[type=reset], [type=submit], button, html [type=button] {
+    -webkit-appearance: button;
+}
+.btn-outline-dark {
+    color: #343a40;
+    background-color: transparent;
+    background-image: none;
+    border-color: #343a40;
+}
+.btn-rsvp {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 2px solid;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.btn-outline-dark-custom.focus, .btn-outline-dark:focus, .btn-outline-dark.focus-visible, .btn-outline-dark:focus-visible {
+    box-shadow: 0 0 0 0.2rem #fff;
+}
+button:focus {
+    outline: 1px none;
+    outline: 5px none;
+}
+
+.corner {
+  outline: 2px solid lightgrey;
+  width: 90vw;
+  height: 52vh;
+  margin: 10px;
+}
+.under-text {
+  /* background-color: white;
+  opacity: 0.5; */
+  /* font: #000; */
+  font-family: 'Source Serif Pro', serif;
+  color: darkgrey;
+  font-size: 1em;
+  width: 380px;
+  height: 70px;
+  padding: 0 5% 5% 5%;
+  margin: auto;
+  text-align: center;
+}
+
+.heading-text{
+  /* background-color: white;
+  opacity: 0.5; */
+  /* font: #000; */
+  font-family: 'Source Serif Pro', serif;
+  color: #000;
+  font-size: 2em;
+  /* width: 170px; */
+  height: 70px;
+  padding: 3%;
+  padding-bottom: 0px;
+  margin: auto;
+  text-align: center;
+}
+.details-bottom{
+    margin: 4em auto 4em;
+}
+</style>
+
+  <!-- header start -->
+  <body>
+  <div class="user-wrap">
+    <!-- <div class="heading-text">
+      <span style="font-size: 25px; color:#696868">JACK NGO & DAYEON LEE</span><br>
+    </div>
+    <div class="heading-text">
+      <p style="font-size: 12px;">4:30PM, FRIDAY, THE 21ST OF APRIL<br>
+      SEONUNGAK | SEOUL, KOREA<br>
+      RECEPTION TO FOLLOW AT 5:00PM</p><br>
+    </div> -->
+      <img class="main-img" src="./img/main-card.jpg"alt="main" />
+
+      <!-- <div class="heading-text">
+        <span style="font-size: 25px; color:#696868">JACK NGO & DAYEON LEE</span><br>
+      </div>
+      <div class="heading-text">
+        <p style="font-size: 12px;">4:30PM, FRIDAY, THE 21ST OF APRIL<br>
+        SEONUNGAK | SEOUL, KOREA<br>
+        RECEPTION TO FOLLOW AT 5:00PM</p><br><br>
+      </div> -->
+      <!-- <header class="header"> -->
+        <!-- <div class="corner">
+        <div> -->
+        <!-- <h1 class="heading"> -->
+
+          <!-- <div class="under-text">
+            We are getting married!
+          <div> -->
+          <!-- <span class="heading-subtext"> We are getting married!</span> -->
+        <!-- </h1> -->
+      </header>
+  </div>
+  <!-- header end -->
+
+
+  <!-- poem start  -->
+  <!-- <section class="section-detail">
+    <div class="details" style="max-width: 350px;">
+      <i class="fa-solid fa-quote-left"></i><br><br>
+      <span style="color:#36393f;">TOGETHER WITH THEIR FAMILIES</span><br>
+      <span style="color:#36393f;">JACK NGO AND DAYEON LEE</span><br>
+      <span style="color:#36393f;">REQUEST YOUR PRESENCE AT THE </span><br>
+      <span style="color:#36393f;">CEREMONY AND CELEBRATION OF THEIR MARRIAGE</span>
+
+      <br><br>
+        <i class="fa-solid fa-quote-right"></i>
+    </div>
+  </section> -->
+  <!-- poem end -->
+
+
+  <section class="section-rsvp">
+        <h2 class="sub-heading">Ngo-Lee Wedding Invitation</h2>
+        <br>
+  <!-- RSVP - ATTENDING START  -->
+  <div class="row btn-close">
+    <div class="col-sm-6 rsvp-col">
+        <button type="button" class="btn-rsvp btn-outline-dark rsvp-button" data-toggle="modal" data-target="#exampleModal2" data-whatever="@mdo">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;WILL ATTEND &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+
+  <!-- <button type="button" class="test-btn" data-toggle="modal" data-target="#exampleModal2" data-whatever="@mdo">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TEST &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button> -->
+
+      <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">RSVP <i class="fa-regular fa-heart"></i></h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+
+              <div class="modal-body">
+                <form name="submit-to-google-sheet">
+                  <div class="form-group">
+                    <!-- <label for="recipient-name" class="col-form-label">NAME</label> -->
+                    <input type="text" name="Name" placeholder="Your name" class="form-control" id="recipient-name" required>
+                  </div>
+
+                    <input type="hidden" name="Attending_yn" class="form-control" value="Y">
+                    <input type="hidden" name="Host" class="form-control" value="Jack">
+
+                  <div class="form-group">
+                    <!-- <label for="recipient-name" class="col-form-label">PLUS ONE</label> -->
+                    <input type="text" name="Plus_one" placeholder="Are you bringing a guest? Type Y or N" class="form-control" id="recipient-name">
+                  </div>
+
+                  <div class="form-group">
+                    <!-- <label for="message-text" class="col-form-label">EMAIL</label> -->
+                    <input type="text" name="Email" placeholder="Your Email" class="form-control" id="recipient-name" required>
+                  </div>
+
+                  <div class="form-group">
+                    <!-- <label for="message-text" class="col-form-label">MESSAGE</label> -->
+                    <textarea class="form-control" name="Message"  placeholder="Is there anything you want to say?" id="message-text"></textarea>
+                  </div>
+
+                 </div>
+                  <div class="modal-footer">
+                    <!-- <button type="button" class="btn btn-outline-dark rsvp-button" data-dismiss="modal">Close</button> -->
+                    <button type="submit" class="btn-rsvp btn-outline-dark rsvp-button">Send</button>
+                  </div>
+              </form>
+            </div>
+        </div>
+        </div>
+      </div>
+  <!-- RSVP - ATTENDING END  -->
+
+  <!-- RSVP - NOT ATTENDING START  -->
+        <!-- modal form test -->
+      <div class="col-sm-6 rsvp-col">
+        <button type="button" class="btn-rsvp btn-outline-dark rsvp-button" data-toggle="modal" data-target="#exampleModal3" data-whatever="@fat">&nbsp;WILL NOT ATTEND&nbsp;</button>
+
+        <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">RSVP <i class="fa-regular fa-heart"></i> </h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+
+              <form name="submit-to-google-sheet-n">
+                <div class="form-group">
+                  <!-- <label for="recipient-name" class="col-form-label">NAME</label> -->
+                  <input type="text" name="Name" placeholder="Your name" class="form-control" required>
+                </div>
+
+                  <input type="hidden" name="Attending_yn" class="form-control" value="N">
+                  <input type="hidden" name="Plus_one" class="form-control" value="N">
+                  <input type="hidden" name="Email" class="form-control" value="N">
+                  <input type="hidden" name="Host" class="form-control" value="Jack">
+
+                <!-- <div class="form-group">
+                 <label for="message-text" class="col-form-label">EMAIL</label>
+                <input type="text" name="Email" placeholder="What is your email address?" class="form-control" >
+                </div> -->
+
+                <div class="form-group">
+                  <!-- <label for="message-text" class="col-form-label">MESSAGE</label> -->
+                  <textarea class="form-control" name="Message" placeholder="Is there anything you want to say?"  id="message-text"></textarea>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+              <!-- <button type="button" class="btn btn-outline-dark rsvp-button" data-dismiss="modal">Close</button> -->
+              <button type="submit" class="btn-rsvp btn-outline-dark rsvp-button">Send</button>
+            </div>
+        </form>
+
+          </div>
+        </div>
+        </div>
+      </div>
+  </div>
+  <br><br>
+  </section>
+
+  <!-- details start -->
+  <section class="section-2">
+        <h2 class="sub-heading">The Details</h2>
+        <br>
+          <p>We can’t wait to share our special day with you. Please let us know if we can help with anything.</p>
+        <br>
+
+        <div class="details">
+          <i class="fa-regular fa-calendar-check"></i>
+          <h5 class="details-heading">DATE</h5>
+          <p>5PM April 21, 2023</p>
+          <a title="Add to Calendar" rel="noopener" href="#" target="_blank" rel="nofollow"></a>
+        </div>
+
+          <i class="fa-regular fa-map"></i>
+          <h5 class="details-heading">VENUE</h5>
+          <p><a rel="noopener" href="https://www.instagram.com/sunwoongak_official/" target='_blank'class="sunwoongak" >Sunwoongak</a>, Seoul, Korea</p>
+            <div >
+              <span> Sunungak  is located in Northern Seoul is surrounded by
+                scenic natural forests and mountain paths.
+                <br>You can easily access the venue by both public transport or by Taxi.
+                 Please feel free to arrive an hour earlier (4:00pm)
+              if you would like to take photos around the venue. </span><br><br>
+            </div>
+          <img class="resort-image" src="./img/re-swg-autumn.png"alt="sunwoongak" />
+
+
+          <br><br>
+          <h5>TRAIN</h5>
+
+            <div >
+              <span class="bold">Bukhansan Ui tube station</span></span><br>
+          <span>The closest subway station is Bukhansan UI which is the UI Line. There are connecting stations at Lines 1,2,4 and 6.
+            <br>Once you get to the station, go to EXIT 2 and there will be a shuttle bus we rented out to get there, with 15 minute intervals. We will provide details closer to the time.
+            <br>If you are new to Seoul I would highly recommend downloading the NAVER Map App. It comes in English and will help you navigate this wonderful city.
+            Alternatively you can take a short 10 minute taxi ride up the mountain.
+          </span><br><br>
+          <span class="bold" >Shuttle bus info</span><br>
+          <span>Black van, number plate: TBC </span><br>
+          <span>If you are having trouble getting there,</span><br>
+          <span>please contact Dayeon 010-0000-0000</span><br><br>
+          </div>
+
+          <h5>TAXI</h5>
+          <div >
+          <span>You can also take a taxi directly to the venue. The Uber app is accessible in Seoul.
+            You'll need to copy and paste the Korean address into the app: 서울특별시 강북구 우이동 265-16 선운각</span><br>
+          <span>It takes around 1-2 hours depending on traffic from most central locations in Seoul.
+</span><br>
+        </div></div>
+
+        <div class="details-bottom">
+          <i class="fa-solid fa-plane-departure"></i>
+          <h5 class="details-heading">Travel</h5>
+          <span>For those that are traveling from abroad
+             we have created some travel tips to help you with your stay. </span><br>
+          <span>Click <a href="https://chisel-guitar-58c.notion.site/Korea-2023-Jack-Dayeon-Wedding-Travel-0cc09ccb05cb498ba69d7492a5c8da55"
+             target="_blank" style="text-decoration:underline; color:#000">here</a> for more information.</span>
+        </div>
+  </section>
+  <!-- detail end -->
+
+  <!-- ceremony start -->
+  <section class="section-ceremony">
+        <div class="details">
+          <i class="fa-solid fa-asterisk"></i>
+          <h5 class="details-heading">WEDDING CEREMONY</h5>
+          <p>We will update this section soon..!</p>
+        </div>
+  </section>
+  <!-- ceremony end -->
+
+  <!-- info start -->
+  <section class="section-info">
+    <i class="fa-regular fa-circle-check"></i>
+    <h5 class="details-heading">INFORMATION</h5>
+        <div class="details" >
+          <span> ‧ Sunungak is located at the foot of Bukhansan mountain,
+            so the temperature my be slightly lower than Seoul.
+            It will be spring time in Seoul with high temperatures reaching 18°c and down to 6°c in the evenings.
+          <br>  Please note the ceremony will be held outdoors so we would recommend bringing a light jacket for the evening. </span><br><br>
+          <span> ‧  The ceremony will start at 5:00PM with a reception to follow and will conclude by 8:00PM.
+ </span><br><br>
+           <span> ‧ Please feel free to arrive an hour earlier if you would like to take photos around the scenic venue. </span><br><br>
+
+          <span> ‧ The venue is connected to the Hanok cafe. Please enjoy a cup of coffee with beautiful scenery! </span>
+
+        </div>
+  </section>
+  <!-- info end -->
+
+  <!-- footer start -->
+  <section class="section-footer">
+    <hr>
+      <footer>
+        <p class="header-size">
+          Hand-crafted with <i class="fa-regular fa-face-kiss-wink-heart"></i> <i class="fa-solid fa-heart"></i> </span> by JACK&DAYEON
+        </p>
+      </footer>
+  </section>
+  <!-- footer end -->
+
+  <!-- script start -->
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+      <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycby-sfWR7ZgwAtttONGs91MAeiPmxGo_IhzUqbt_bScT_4x9UQN602Wy5uOobn3dxzap/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const formNot = document.forms['submit-to-google-sheet-n']
+
+  //send form
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            // .then(response => console.log('Success!', response))
+            .then(alert("Thank you for comming!"))
+            // .then(swal("Thank you", "See you at the wedding :)", "success"))
+            // .then(swal({
+            //             title: "Thank you!",
+            //             text: "See you at the wedding :)",
+            //             button: false
+            //           }))
+            .then(  setTimeout(() => {
+                       console.log("Delayed for 2 second.")
+                     }, 4000))
+            .then(location.replace("https://day-lee.github.io/wedding-invitation/index-mo.html"))
+            .catch(error => console.error('Error!', error.message))
+        });
+
+        formNot.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(formNot)})
+          .then(alert("Thank you!"))
+          .then(location.replace("https://day-lee.github.io/wedding-invitation/index-mo.html"))
+          .catch(error => console.error('Error!', error.message))
+        });
+
+
+  // kakao map API
+        var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
+        var options = { //지도를 생성할 때 필요한 기본 옵션
+        	center: new kakao.maps.LatLng(37.65570870, 126.999852), //지도의 중심좌표.
+        	level: 6 //지도의 레벨(확대, 축소 정도)
+        };
+
+        var map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
+        // 마커가 표시될 위치입니다
+        var markerPosition  = new kakao.maps.LatLng(37.65570870, 126.999852);
+
+        // 마커를 생성합니다
+        var marker = new kakao.maps.Marker({
+            position: markerPosition
+        });
+
+        // 마커가 지도 위에 표시되도록 설정합니다
+        marker.setMap(map);
+
+
+  //copy to clipboard
+        let text1 = document.getElementById('dadAccount').innerHTML;
+        let text2 = document.getElementById('myAccount').innerHTML;
+
+        const copyContent1 = async () => {
+          try {
+            await navigator.clipboard.writeText(text1);
+            alert('계좌번호가 복사되었습니다.');
+          } catch (err) {
+            console.error('Failed to copy: ', err);
+          }
+        }
+
+        const copyContent2 = async () => {
+          try {
+            await navigator.clipboard.writeText(text2);
+            alert('계좌번호가 복사되었습니다.');
+          } catch (err) {
+            console.error('Failed to copy: ', err);
+          }
+        }
+
+  </script>
+  </body>
+</html>

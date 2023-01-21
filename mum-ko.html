@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <!-- meta -->
+    <meta property="og:url" content="https://day-lee.github.io/wedding-invitation/">
+    <meta property="og:title" content="잭 & 다연">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="img/main-golden.jpg">
+    <meta property="og:description" content="결혼식에 초대합니다.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" >
+
+    <title>Jack & Dayeon</title>
+    <link rel="icon" href="img/heart.png">
+
+    <!--  CSS Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="theme-ko.css">
+    <!-- <link rel="stylesheet" type="text/css" href="theme_ko.css"> -->
+    <link rel="stylesheet" type="text/css" href="./icons/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!--  Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;900&family=Ubuntu&display=swap">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&family=Source+Serif+Pro&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR&display=swap" rel="stylesheet">
+    <!--  Font Awesome -->
+    <script src="https://kit.fontawesome.com/1754e001d0.js" crossorigin="anonymous"></script>
+
+    <!-- sweetalert -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+  </head>
+
+<style>
+.btn-outline-dark.focus, .btn-outline-dark:focus {
+    box-shadow: 0 0 0 0.2rem #fff;
+}
+.btn-rsvp:focus-visible {
+  outline: 2px black;
+  border-radius: 0%;
+}
+.btn-close {
+  margin-right: 10%;
+  margin-left: 10%;
+  /* text-align: center; */
+}
+.btn.focus, .btn:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0 rgb(0 123 255 / 25%);
+}
+.btn-outline-dark-custom:not(:disabled):not(.disabled).active, .btn-outline-dark:not(:disabled):not(.disabled):active, .show>.btn-outline-dark.dropdown-toggle {
+    color: #fff;
+    background-color: #343a40;
+    border-color: #343a40;
+}
+.btn-rsvp:not(:disabled):not(.disabled).active, .btn:not(:disabled):not(.disabled):active {
+    background-image: none;
+}
+.btn-rsvp:not(:disabled):not(.disabled) {
+    cursor: pointer;
+}
+.btn-outline-dark:hover {
+    color: #fff;
+    background-color: #343a40;
+    border-color: #343a40;
+}
+.btn-rsvp:focus, .btn:hover {
+    text-decoration: none;
+}
+[type=reset], [type=submit], button, html [type=button] {
+    -webkit-appearance: button;
+}
+.btn-outline-dark {
+    color: #343a40;
+    background-color: transparent;
+    background-image: none;
+    border-color: #343a40;
+}
+.btn-rsvp {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 2px solid;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.btn-outline-dark-custom.focus, .btn-outline-dark:focus, .btn-outline-dark.focus-visible, .btn-outline-dark:focus-visible {
+    box-shadow: 0 0 0 0.2rem #fff;
+}
+button:focus {
+    outline: 1px none;
+    outline: 5px none;
+}
+
+.corner {
+  outline: 2px solid lightgrey;
+  width: 90vw;
+  height: 52vh;
+  margin: 10px;
+}
+.under-text {
+  /* background-color: white;
+  opacity: 0.5; */
+  /* font: #000; */
+  font-family: 'Source Serif Pro', serif;
+  color: darkgrey;
+  font-size: 1em;
+  width: 380px;
+  height: 70px;
+  padding: 0 5% 5% 5%;
+  margin: auto;
+  text-align: center;
+}
+
+.heading-text{
+  /* background-color: white;
+  opacity: 0.5; */
+  /* font: #000; */
+  font-family: 'Source Serif Pro', serif;
+  color: #000;
+  font-size: 2em;
+  /* width: 170px; */
+  height: 70px;
+  padding: 3%;
+  padding-bottom: 0px;
+  margin: auto;
+  text-align: center;
+}
+.details-bottom{
+    margin: 4em auto 4em;
+}
+</style>
+
+  <!-- Korean version -->
+  <!-- header start -->
+  <body>
+  <div class="user-wrap">
+      <img class="main-img" src="./img/main-card.jpg"alt="main" />
+      </header>
+  </div>
+  <!-- header end -->
+  <!-- rsvp start -->
+  <section class="section-rsvp">
+    <h2 class="sub-heading">초대합니다</h2>
+    <h4 class="sub-heading-ko">Wedding Invitation</h4>
+    <br>
+
+  <!-- RSVP - ATTENDING START  -->
+  <div class="row btn-close">
+    <div class="col-sm-6 rsvp-col">
+      <button type="button" class="btn-rsvp btn-outline-dark rsvp-button" data-toggle="modal" data-target="#exampleModal2" data-whatever="@mdo">&nbsp;&nbsp;&nbsp;참석합니다&nbsp;&nbsp;&nbsp;</button>
+
+      <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">참석 의사 전달하기 <i class="fa-regular fa-heart"></i></h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+
+            <div class="modal-body">
+              <form name="submit-to-google-sheet">
+                <div class="form-group">
+                  <!-- <label for="recipient-name" class="col-form-label">NAME</label> -->
+                  <input type="text" name="Name" placeholder="성함" class="form-control" id="recipient-name" required>
+                </div>
+                  <input type="hidden" name="Attending_yn" class="form-control" value="Y">
+                  <input type="hidden" name="Host" class="form-control" value="Dayeon">
+
+                <div class="form-group">
+                  <!-- <label for="recipient-name" class="col-form-label">PLUS ONE</label> -->
+                  <input type="text" name="Plus_one" placeholder="동행인 여부: 예 / 아니오" class="form-control" id="recipient-name">
+                </div>
+
+                <div class="form-group">
+                  <!-- <label for="message-text" class="col-form-label">EMAIL</label> -->
+                  <input type="hidden" name="Email" placeholder="N" class="form-control" id="recipient-name">
+                </div>
+
+                <div class="form-group">
+                  <!-- <label for="message-text" class="col-form-label">MESSAGE</label> -->
+                  <textarea class="form-control" name="Message"  placeholder="질문, 요청사항, 메세지 전하기" id="message-text"></textarea>
+                </div>
+
+               </div>
+                <div class="modal-footer">
+                  <!-- <button type="button" class="btn btn-outline-dark rsvp-button" data-dismiss="modal">Close</button> -->
+                  <button type="submit" class="btn-rsvp btn-outline-dark rsvp-button">전송</button>
+                </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!-- RSVP - ATTENDING END  -->
+
+  <!-- RSVP - NOT ATTENDING START  -->
+    <div class="col-sm-6 rsvp-col">
+      <button type="button" class="btn-rsvp btn-outline-dark rsvp-button" data-toggle="modal" data-target="#exampleModal3" data-whatever="@fat">&nbsp;&nbsp;&nbsp;불참합니다&nbsp;&nbsp;&nbsp;</button>
+
+    <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">참석 의사 전달하기 <i class="fa-regular fa-heart"></i> </h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+
+          <form name="submit-to-google-sheet-n">
+            <div class="form-group">
+              <!-- <label for="recipient-name" class="col-form-label">NAME</label> -->
+              <input type="text" name="Name" placeholder="성함" class="form-control" required>
+            </div>
+
+              <input type="hidden" name="Attending_yn" class="form-control" value="N">
+              <input type="hidden" name="Plus_one" class="form-control" value="N">
+              <input type="hidden" name="Email" class="form-control" value="N">
+              <input type="hidden" name="Host" class="form-control" value="Dayeon">
+
+            <!-- <div class="form-group">
+             <label for="message-text" class="col-form-label">EMAIL</label>
+            <input type="text" name="Email" placeholder="What is your email address?" class="form-control" >
+            </div> -->
+
+            <div class="form-group">
+              <!-- <label for="message-text" class="col-form-label">MESSAGE</label> -->
+              <textarea class="form-control" name="Message" placeholder="메세지 전하기"  id="message-text"></textarea>
+            </div>
+
+          </div>
+            <div class="modal-footer">
+              <!-- <button type="button" class="btn btn-outline-dark rsvp-button" data-dismiss="modal">Close</button> -->
+              <button type="submit" class="btn-rsvp btn-outline-dark rsvp-button">전송</button>
+            </div>
+          </form>
+        </div>
+    </div>
+    </div>
+    </div>
+  </div>
+  <br><br>
+  </section>
+  <!-- <RSVP end> -->
+
+  <!-- poem start  -->
+  <section class="section-detail">
+    <div class="details" style="max-width: 350px;">
+      <i class="fa-solid fa-quote-left"></i><br><br>
+      <span> 영국에서 한국까지 8,857 km를 </span><br>
+      <span> 날아와 다연을 만났고, </span><br>
+      <span> 잭과 함께 할 날을 위해 8,857 km의</span><br>
+      <span> 긴 여정을 시작하려 합니다.</span><br><br>
+      <span> 두 사람 하나 되는 뜻깊은 날  </span><br>
+      <span> 함께 축복해 주시면  </span><br>
+      <span> 더 없는 기쁨으로 간직하며 살겠습니다. </span><br>
+
+      <br>
+      <i class="fa-solid fa-quote-right"></i>
+    </div>
+  </section>
+  <!-- poem end -->
+
+   <!-- contact start -->
+  <section class="section-rsvp-end">
+  <i class="fa-regular fa-heart"></i>
+      <h5> 이용희 ‧ 이봉화<span style="font-size:15px; color:gray; ">의 딸</span> 다연 </h5>
+      <br>
+        <button class="btn-rsvp btn-outline-dark" type="button" data-toggle="collapse" data-target="#contact" aria-expanded="false" aria-controls="collapseExample">
+          혼주에게 연락하기
+        </button>
+      <div class="collapse" id="contact">
+        <div class="card card-body">
+          <p>신부 아버지 <span class="bold">이용희</span> &nbsp;
+              <a href="tel:010-0000-0000"><i class="fa-solid fa-phone fa-radius" ></i></a>
+              <a href="sms:010-0000-0000"><i class="fa-regular fa-comment fa-radius"></i></a> </p>
+          <p>신부 어머니 <span class="bold">이봉화</span> &nbsp;
+              <a href="tel:010-0000-0000"><i class="fa-solid fa-phone fa-radius"></i></a>
+              <a href="sms:010-0000-0000"><i class="fa-regular fa-comment fa-radius"></i></a></p>
+        </div>
+      </div>
+  </section>
+  <!-- contact end -->
+
+  <!-- details start -->
+  <section class="section-detail">
+        <h2 class="sub-heading">The Details</h2>
+  <hr><br>
+        <div class="details">
+          <i class="fa-regular fa-calendar-check"></i>
+          <h5 class="details-heading">DATE</h5>
+          <p>2023년 4월 21일 금요일 5시</p>
+          <a title="Add to Calendar" rel="noopener" href="#" target="_blank" rel="nofollow"></a>
+        </div>
+
+        <div class="details">
+          <i class="fa-regular fa-map"></i>
+          <h5 class="details-heading">VENUE</h5>
+          <p><a rel="noopener" href="https://www.instagram.com/sunwoongak_official/" target='_blank'class="sunwoongak"> 선운각 한옥 </a></p>
+          <img class="resort-image" src="./img/re-swg-spring.png" alt="sunwoongak" />
+        </div>
+
+        <div class="details">
+        <i class="fa-solid fa-location-dot"></i>
+          <h5> 오시는 길 </h5>
+          <p class="bold">선운각 한옥 카페 </p>
+          <p> 서울특별시 강북구 우이동 265-16 선운각 </p>
+          <p> <a href="tel:0507-1399-1105" style="color: #000;">전화 0507-1399-1105 </a></p>
+
+          <button class="btn-rsvp btn-outline-dark" onclick="window.open('https://map.kakao.com/link/map/선운각,37.65570870,126.999852')">
+            지도 열기
+          </button>
+          <br><br>
+          <div id="map" style="width:300px; height:300px;"></div>
+          <script type="text/javascript" src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=41e49f5e05f54988792f14f849f715a5"></script>
+          <br>
+          <p class="bold"> 지하철  </p>
+
+
+          <span>-우이신설선 환승 정보- </span><br>
+
+          <span>1, 2호선 신설동역 </span><br>
+          <span>4호선 성신여대 입구역 </span><br>
+          <span>6호선 보문역 </span> <br>
+          <span style="text-decoration: underline">북한산우이역 하차 </span> <br><br>
+          <span>선운각까지 도보 30분, 택시 5분 </span> <br><br>
+          <span>선운각까지 셔틀버스 운행</span>  <br>
+          <br>
+          <button class="btn" type="button" data-toggle="collapse" data-target="#bus-stop" aria-expanded="false" aria-controls="collapseExample">
+            셔틀 정보 보기
+          </button>
+          <div class="collapse" id="bus-stop">
+            <div class="card card-body">
+              <p> 2번 출구 노스페이스 건물 옆 <br>농협장학관 정문 앞 승하차 </p>
+              <p> 검은색 스타렉스<br>번호판 업데이트 예정 </p>
+              <img style="width: 250px;" src="./img/shuttle.PNG" alt="parking2" />
+            </div>
+          </div>
+           <br><br>
+            <p class="bold"> 자가용  </p>
+            <spanp>선운각 주차장 이용</span> <br><br>
+
+            <button class="btn" type="button" data-toggle="collapse" data-target="#parking" aria-expanded="false" aria-controls="collapseExample">
+                주차 정보 보기
+            </button>
+            <br>
+              <div class="collapse" id="parking">
+                <div class="card card-body">
+
+                  <p> 갈림길에서 표지판을 따라 왼쪽 주차장으로 진입하세요. </p>
+                  <spanp>주차 요금 정산소에서<br><span class="bold"> "이다연 결혼식 참석"</span>
+                  말씀해주시면<br> 주차비 무료로 처리됩니다.</span> <br>
+                    <img style="width: 250px;" src="./img/parking3.PNG" alt="parking" /><br><br>
+
+                    <p> 주차요원의 안내에 따라주세요.  </p>
+                      <img style="width: 250px;" src="./img/parking2.jpg" alt="parking2" />
+                </div>
+              </div>
+          </div>
+  </section>
+  <!-- details end -->
+
+  <!-- ceremony start -->
+  <section class="section-ceremony">
+        <div class="details">
+          <i class="fa-solid fa-asterisk"></i>
+          <h5 class="details-heading">WEDDING CEREMONY</h5>
+          <p>예식은 1, 2부로 나누어 진행될 예정입니다.</p>
+          <p>식순 업데이트 예정..!</p>
+        </div>
+  </section>
+  <!-- ceremony end -->
+
+
+  <!-- info start -->
+  <section class="section-info">
+    <i class="fa-regular fa-circle-check"></i>
+    <h5 class="details-heading">INFORMATION</h5>
+        <div class="details" style="text-align: left; max-width: 350px;">
+          <span> ‧ 선운각은 북한산 자락에 위치하여 서울 지역 평균보다 온도가 낮을 수 있습니다.
+                예식이 야외에서 진행되므로 이 점 참고해 주시기 바랍니다. </span><br><br>
+          <span> ‧ 1부는 5시에 시작됩니다. 1부 종료 후 식사가 시작되며, 식사 후 2부는 8시에 종료됩니다.
+                일정이 있으신 분들은 식사 후 편하게 일어나시면 됩니다.  </span><br><br>
+
+        </div>
+  </section>
+  <!-- info end -->
+
+  <!-- send heart start -->
+  <section class="section-heart">
+    <i class="fa-regular fa-envelope"></i>
+      <h5> 마음 전하실 곳 </h5>
+      <p>  </p>
+      <button class="btn-rsvp btn-outline-dark" type="button" data-toggle="collapse" data-target="#send-heart" aria-expanded="false" aria-controls="collapseExample">
+       신부측 계좌번호
+      </button>
+
+      <div class="collapse" id="send-heart">
+        <div class="card card-body">
+          <div class="row btn-close">
+            <div class="col-md-8">
+                  <span>신한 예금주</span>  <p id="dadAccount">110111111111</p>
+            </div>
+            <!-- <div class="col-md-4">
+                  <button class="copy-btn" onclick="copyContent1()">복사하기</button>
+            </div> -->
+            <br><br><br>
+            <div class="col-md-8">
+              <span>신한 예금주</span>  <p id="myAccount">222-222-222222</p>
+            </div>
+            <!-- <div class="col-md-4">
+              <button class="copy-btn" onclick="copyContent2()">복사하기</button></p>
+            </div> -->
+          </div>
+        </div>
+      </div>
+  </section>
+  <!-- send heart end -->
+
+  <!-- footer start -->
+  <section class="section-footer">
+    <hr>
+      <footer>
+        <p class="header-size">
+           <i class="fa-solid fa-heart"></i> 을 담아 만들었습니다 </span> by 잭&다연 2023
+        </p>
+      </footer>
+  </section>
+  <!-- footer end -->
+
+  <!-- script start -->
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+      <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycby-sfWR7ZgwAtttONGs91MAeiPmxGo_IhzUqbt_bScT_4x9UQN602Wy5uOobn3dxzap/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const formNot = document.forms['submit-to-google-sheet-n']
+
+  //send form
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            // .then(response => console.log('Success!', response))
+            .then(alert("감사합니다! 결혼식 날 봐요 :) "))
+            // .then(swal("Thank you", "See you at the wedding :)", "success"))
+            // .then(swal({
+            //             title: "Thank you!",
+            //             text: "See you at the wedding :)",
+            //             button: false
+            //           }))
+            .then(  setTimeout(() => {
+                       console.log("Delayed for 2 second.")
+                     }, 4000))
+            .then(location.replace("https://day-lee.github.io/wedding-invitation/mum-ko.html"))
+            .catch(error => console.error('Error!', error.message))
+        });
+
+        formNot.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(formNot)})
+          .then(alert("감사합니다!"))
+          .then(location.replace("https://day-lee.github.io/wedding-invitation/mum-ko.html"))
+          .catch(error => console.error('Error!', error.message))
+        });
+
+
+  // kakao map API
+        var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
+        var options = { //지도를 생성할 때 필요한 기본 옵션
+        	center: new kakao.maps.LatLng(37.65570870, 126.999852), //지도의 중심좌표.
+        	level: 6 //지도의 레벨(확대, 축소 정도)
+        };
+
+        var map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
+        // 마커가 표시될 위치입니다
+        var markerPosition  = new kakao.maps.LatLng(37.65570870, 126.999852);
+
+        // 마커를 생성합니다
+        var marker = new kakao.maps.Marker({
+            position: markerPosition
+        });
+
+        // 마커가 지도 위에 표시되도록 설정합니다
+        marker.setMap(map);
+
+
+  //copy to clipboard
+        let text1 = document.getElementById('dadAccount').innerHTML;
+        let text2 = document.getElementById('myAccount').innerHTML;
+
+        const copyContent1 = async () => {
+          try {
+            await navigator.clipboard.writeText(text1);
+            alert('계좌번호가 복사되었습니다.');
+          } catch (err) {
+            console.error('Failed to copy: ', err);
+          }
+        }
+
+        const copyContent2 = async () => {
+          try {
+            await navigator.clipboard.writeText(text2);
+            alert('계좌번호가 복사되었습니다.');
+          } catch (err) {
+            console.error('Failed to copy: ', err);
+          }
+        }
+
+  </script>
+  </body>
+</html>

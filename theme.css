@@ -1,0 +1,303 @@
+*{
+  /*  font-family: 'Noto Serif KR', serif; korean fonts*/
+    font-size: 16px;
+    color: #222;
+}
+html, body{
+    margin: 0;
+    height: 100vh;
+    text-align: center;
+    scroll-behavior: smooth;
+}
+body{
+    /*ios no scrolable */
+    touch-action: pan-x pan-y;
+}
+h5 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 500;
+}
+.bold {
+  font-weight: bold;
+}
+.copy-btn{
+  margin-top: 4px;
+  border: none;
+  padding: 8px 8px;
+}
+.details{
+    margin: 0 auto 4em;
+}
+.details-heading{
+    text-transform: uppercase;
+}
+.fa-radius{
+  border: solid 1.7px;
+  border-radius: 50%;
+  padding: 5px 5px;
+}
+.fas {
+    font-size: 3em;
+    opacity: .8;
+}
+.fixed-button{
+    background: rgba(20,20,20,.5);
+    border-radius: 1em;
+    bottom: 1em;
+    color: white;
+    font-weight: bold;
+    padding: 1em;
+    position: fixed;
+    right: 1em;
+    text-decoration: none;
+    z-index: 9999;
+}
+.fixed-button::after{
+    content: "\25BE";
+    display: block;
+    font-size: 28px;
+    line-height: 0;
+    margin-bottom: 6px;
+    margin-top: 10px;
+    text-align: center;
+}
+.fixed-button:active,
+.fixed-button:hover{
+    background: rgba(20,20,20,.9);
+}
+.form-check-radio input[type=radio], .form-check-radio input[type=radio]+.form-check-sign:after {
+    opacity: 0;
+    transition: opacity .3s linear;
+    content: " ";
+    display: block;
+}
+.header{
+    background-image: url(./img/main-golden.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 60%;
+    background-attachment: scroll;
+    background-size: cover;
+    height: 80vh;/* 40vh; */
+    margin: 0 8em 0 8em;
+    /* padding-top: 6vh; */
+}
+.header-size{
+    font-size: 13px;
+}
+.heading {
+    color: #ffffff;
+    display: block;
+    /* font-family: 'Caveat', cursive; */
+    font-family: 'Source Serif Pro', serif;
+    font-size: 2em;
+    font-weight: normal;
+    /* text-shadow: 0 0 10px #000; */
+    text-align: center;
+}
+.heading-subtext{
+    color: #fff;
+    display: block;
+    font-family: 'Source Serif Pro', serif;
+    font-size: .6em;
+}
+#map{
+    width: 300px;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background: url(http://t1.daumcdn.net/mapjsapi/images/2x/bg_tile.png);
+}
+
+.rsvp {
+  text-align: center;
+}
+.resort-image{
+    width: 300px;
+}
+.rsvp-btn {
+  text-align: center;
+  color: red;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+.swal-button {
+  padding: 7px 19px;
+  border-radius: 2px;
+  background-color: #fff;
+  font-size: 12px;
+  border: 1px solid #000;
+  color: #000;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
+}
+.swal-button:active {
+    background-color: #fff;
+}
+.swal-button:not([disabled]):hover {
+    background-color: #fff;
+}
+.swal-button:focus {
+    outline: none;
+    box-shadow: none;}
+.sunwoongak {
+  color: #000;
+  text-decoration : underline;
+}
+.section{
+    margin: 0 auto;
+    max-width: 600px;
+    /* padding-top: 3.5em;
+    padding-bottom: 0px; */
+    padding: 3.5em 2.4em 1px;
+    text-align: center;
+    background-color: #fefbf6;
+}
+.section-rsvp{
+    margin: 0 auto;
+    /* max-width: 600px; */
+    /* padding-top: 3.5em;
+    padding-bottom: 0px; */
+    padding: 3.5em 2.4em 1px;
+    text-align: center;
+    background-color: #fefbf6;
+}
+.section-rsvp-end{
+    margin: 0 auto;
+    /* max-width: 600px; */
+    /* padding-top: 3.5em;
+    padding-bottom: 0px; */
+    padding: 3.5em 2.4em 3.5em;
+    text-align: center;
+    background-color: #fefbf6;
+}
+.section-1{
+    margin: 0 auto;
+    /* max-width: 600px; */
+    /* padding-top: 3.5em;
+    padding-bottom: 0px; */
+    padding: 3.5em 2.4em 1px;
+    text-align: center;
+    background-color: #fefbf6;
+}
+.section-2{
+    margin: 0 auto;
+    /* max-width: 600px; */
+    /* padding-top: 3.5em;
+    padding-bottom: 0px; */
+    padding: 3.5em 2.4em 1px;
+    text-align: center;
+}
+.section-detail{
+    /* margin: 0 auto;
+    max-width: 600px; */
+    /* padding-top: 3.5em;
+    padding-bottom: 0px; */
+    padding: 3.5em 2.4em 0;
+    text-align: center;
+    font-family: 'Source Serif Pro', serif;
+}
+.section-ceremony{
+    margin: 0 auto;
+    /* max-width: 600px; */
+    /* padding-top: 3.5em;
+    padding-bottom: 0px; */
+    padding: 3.5em 2.4em 1px;
+    text-align: center;
+    background-color: #fefbf6;
+}
+.section-info{
+    margin: 0 auto;
+    /* max-width: 600px; */
+    /* padding-top: 3.5em;
+    padding-bottom: 0px; */
+    padding: 3.5em 2.4em 0;
+    text-align: center;
+}
+.section-heart{
+    margin: 0 auto;
+    /* max-width: 600px; */
+    /* padding-top: 3.5em;
+    padding-bottom: 0px; */
+    padding: 3.5em 2.4em 2em;
+    text-align: center;
+    background-color: #fefbf6;
+}
+.section-footer{
+    margin: 0 auto;
+    /* max-width: 600px; */
+    /* padding-top: 3.5em;
+    padding-bottom: 0px; */
+    padding: 1px 2.4em 1px;
+    text-align: center;
+        background-color: #fefbf6;
+}
+.sub-heading{
+    font-family: 'Source Serif Pro', serif;
+    font-size: 2em;
+    /* margin-top: 2em; */
+    text-align: center;
+}
+.sub-heading-ko{
+    font-family: 'Source Serif Pro', serif;
+    font-size: 1.3em;
+    text-align: center;
+}
+.test-btn {
+  color: red;
+}
+.user-wrap{
+  text-align: center;
+  /* border: solid 1.7px darkgrey;
+  border-radius: 0%;
+  padding: 2px 2px 5px;
+  margin: 20px; */
+}
+.main-img{
+  width: 580px;
+  border: 1px solid lightgrey;
+}
+
+@media only screen and (max-width: 600px) {
+  .header{
+      /* background-image: url(./img/main-golden.jpg); */
+      background-image: url(./img/r-main-golden.png);
+      background-repeat: no-repeat;
+      background-position: 55%;
+      background-attachment: scroll;
+      background-size: cover;
+      height: 45vh;/* 40vh; */
+      margin: 0;
+      margin: 10px 10px;
+
+      /* padding-top: 40vh; */
+    }
+  .heading {
+      font-size: 1em;
+    }
+  .rsvp-col {
+      margin-bottom: 10%;
+      text-align: center;
+    }
+  .section {
+      padding: 0px auto 0px auto;
+    }
+    .heading-text{
+      /* background-color: white;
+      opacity: 0.5; */
+      /* font: #000; */
+      font-family: 'Source Serif Pro', serif;
+      color: #000;
+      font-size: 2em;
+      /* width: 170px; */
+      height: 70px;
+      padding: 3%;
+      padding-bottom: 0px;
+      margin: auto;
+      text-align: center;
+    }
+    .main-img{
+      width: 100%;
+    }
+}
