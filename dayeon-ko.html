@@ -417,18 +417,23 @@ button:focus {
       <div class="collapse" id="send-heart">
         <div class="card card-body">
           <div class="row btn-close">
-            <div class="col-md-8">
-                  <span>신한 이용희</span>  <p id="dadAccount">110-035-638260</p>
+            <!-- <div class="col-md-8"> -->
+            <div class="col-md-12">
+                  <span>신한 이용희</span>  <p>110-035-638260</p>
+                  <input id="clipboard-temp" value="110-035-638260" hidden/>
             </div>
             <!-- <div class="col-md-4">
-                  <button class="copy-btn" onclick="copyContent1()">복사하기</button>
+                  <button class="copy-btn" onclick="copyNum();" style="cursor: pointer">복사하기</button>
             </div> -->
+
             <br><br><br>
-            <div class="col-md-8">
-              <span>신한 이다연</span>  <p id="myAccount">110-304-501333</p>
+            <!-- <div class="col-md-8"> -->
+            <div class="col-md-12">            
+              <span>신한 이다연</span>  <p>110-304-501333</p>
+                <input id="clipboard-temp" value="110-304-501333" hidden/>
             </div>
             <!-- <div class="col-md-4">
-              <button class="copy-btn" onclick="copyContent2()">복사하기</button></p>
+                  <button class="copy-btn" onclick="copyNum();" style="cursor: pointer">복사하기</button>
             </div> -->
           </div>
         </div>
@@ -525,6 +530,14 @@ button:focus {
           } catch (err) {
             console.error('Failed to copy: ', err);
           }
+        }
+
+        function copyNum() {
+        var copyText = document.getElementById("clipboard-temp");
+        // copyText.focus();
+        copyText.select();
+        document.execCommand("copy");
+        alert('계좌번호가 복사되었습니다.')
         }
 
   </script>

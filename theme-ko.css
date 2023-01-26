@@ -256,6 +256,7 @@ h5 {
 }
 .main-img{
   width: 580px;
+  border: 1px solid lightgrey;
 }
 
 @media only screen and (max-width: 600px) {
@@ -298,5 +299,6 @@ h5 {
     }
     .main-img{
       width: 100%;
+      border: 1px solid lightgrey;      
     }
 }
